@@ -1,0 +1,54 @@
+<div class="row">
+    <div class="column side">
+    </div>
+        <div class="column middle">
+            <section id="formular-cumparaturi">
+                <h2>Cumpărături</h2>
+                <form>
+                    <div>
+                        <label for="numeProdus">Nume Produs</label>
+                        <input type="text" id="numeProdus" placeholder="ex: recompense" />
+                    </div>
+                    <div>
+                        <label for="cantitate">Cantitate</label>
+                        <input type="text" id="cantitate" placeholder="ex: 200g" />
+                    </div>
+
+                    <fieldset id="alegereStorage">
+                        <legend>Modalitate de salvare:</legend>
+                        <label for="localstorage">localStorage</label>
+                        <input type="radio" name="storage" value="localstorage" checked>
+                            
+                        <label for="indexeddb">IndexedDB</label>
+                        <input type="radio" name="storage" value="indexeddb">
+                </fieldset>
+                    
+                    <input type="button" id="btnAdauga" value="Adaugă" class="myButton"></button>
+                </form>
+
+                <h2>Lista Cumpărături</h2>
+                <table id="tabelCumparaturi">
+                    <thead>
+                        <tr>
+                            <th>Nr.</th>
+                            <th>Nume Produs</th>
+                            <th>Cantitate</th>
+                        </tr>
+                    </thead>
+                    <tbody id="corpTabel">
+
+                    </tbody>
+                </table>
+        </section>
+        </div>
+    <div class="column side">
+    </div>
+</div>
+
+<!--
+
+
+--folosim class
+--informatia sa se salveze in local storage
+
+-->

@@ -1,0 +1,80 @@
+<div class="row">
+   <div class="column side">
+      <div class="sidebar section">
+         <aside>
+         </aside>
+      </div>
+   </div>
+   <div class="column middle">
+      <section>
+         <h1>Pisica de casă</h1>
+         <h1>Înregistrează utilizatorul &#9786;</h1>
+         <form>
+            <fieldset>
+               <legend>Informații generale</legend>
+               &#128603;<label for="nutilizator">Nume utilizator:</label>&#128600;<br>
+               <input type="text" id="nutilizator" name="nutilizator"><br>
+               &#128603;<label for="parola">Parola:</label>&#128600;<br>
+               <input type="password" id="parola" name="password"><br>
+               &#128603;<label for="prenume">Prenume:</label>&#128600;<br>
+               <input type="text" id="prenume" name="prenume"><br>
+               &#128603;<label for="nume">Nume:</label>&#128600;<br>
+               <input type="text" id="nume" name="nume"><br>
+               &#128603;<label for="email">Email:</label>&#128600;<br>
+               <input type="email" id="email" name="email"><br>
+               &#128603;<label for="telefon">Telefon:</label>&#128600;<br>
+               <input type="tel" id="telefon" name="telefon"><br>
+            </fieldset>
+            <fieldset>
+               <legend>Informații personale</legend>
+               &#128603;<label for="sex">Sex:</label>&#128600;<br>
+               <select id="sex" name="sex">
+                  <option value="feminin">Feminin</option>
+                  <option value="masculin">Masculin</option>
+                  <option value="altul">Altul</option>
+               </select>
+               <br>
+               &#128603;<label for="mancare">Mâncare preferată:</label>&#128600;<br>
+               <input list="feluri" id="mancare" name="mancare">
+               <datalist id="feluri">
+                  <option value="sarmale">Sarmale</option>
+                  <option value="panettone">Panettone</option>
+                  <option value="sushi">Sushi</option>
+                  <option value="tot">De toate</option>
+               </datalist>
+               <br>
+               &#128603;<label for="culoare">Culoarea preferată:</label>&#128600;<br>
+               <input type="color" id="culoare" name="culoare"><br>
+               &#128603;<label for="dnastere">Data nașterii:</label>&#128600;<br>
+               <input type="date" id="dnastere" name="dnastere"><br>
+               &#128603;<label for="onastere">Ora nașterii:</label>&#128600;<br>
+               <input type="time" id="onastere" name="onastere"><br>
+               &#128603;<label for="varsta">Vârsta:</label>&#128600;<br>
+               <input type="range" id="varsta" name="varsta" min="0" max="100"><br>
+               &#128603;<label for="website">Adresa paginii personale:</label>&#128600;<br>
+               <input type="url" id="website" name="website"><br>
+               &#128603;<label for="descriere">Descriere:</label>&#128600;<br>
+               <textarea id="descriere" name="descriere" rows="4" cols="40"></textarea>
+            </fieldset>
+         </form>
+         <hr>
+         <!--<button type="submit" disabled>Înregistrează</button>-->
+         <!--am adaugat functia de inregistreaza-->
+         <button class="myButton" onclick="inregistreaza()">Înregistrează</button>
+         <p id="rezultat"></p>
+      </section>
+   </div>
+   <div class="column side">
+      <aside>
+         <figure>
+            <img src="https://basepaws.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Fqj2yxv39d6ig%2F1wMKs0lPg0uu63ygLSckMN%2F2095049173360d931c1d08f2a34e525c%2Forange-cat.jpeg&w=3840&q=75" alt="O pisica portocalie" width="100%">
+            <!--<img src="imagini/pisica.jpg" alt="aceeasi pisica" width="50%">-->
+            <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExOXRvM29iOXEzb3lkMXFqZW93a2Q3ODF4YnZjNHVhbzYycWsybXd6eSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Yt09iFvD9u5AQ/giphy.gif" alt="gif1" width="100%">
+            <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExc2E4cWQyZnBpaTN4OTBwdmk1ZmozOTZia3FoN2s5N25kdGJtZnRpcCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/12T3GI5PpTrhoQ/giphy.gif" alt="gif2" width="100%">
+            <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExcTNybWl4OW1vbzhhMzdpZmlkd3B6d280cm9vMTdtOGx6eXJwM3FjcyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qqOlHOFzgfzJC/giphy.gif" alt="gif3" width="100%">
+            <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExamxhNWVkeTR5ZWQ1YXJqMjV0a200NXhlOW1iZjA0eWgzczJ5YjA0bSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/W3HRymvkwt3fM7igO2/giphy.gif" alt="gif4" width="100%">
+            <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExcGpvMHMyb3loNnh3bXVyZXhrZXdrZjFtNHB6bWR5YXJ3cW9kbmJkeiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/DyQM6pD3IyF9iLE21G/giphy.gif" alt="gif5" width="100%">
+         </figure>
+      </aside>
+   </div>
+</div>

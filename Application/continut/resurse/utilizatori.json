@@ -1,0 +1,54 @@
+[
+  {
+    "utilizator": "test",
+    "parola": "test"
+  },
+  {
+    "utilizator": "student",
+    "parola": "student",
+    "prenume": "Anna",
+    "nume": "Maria",
+    "email": "ana-maria.chelarasu@student.tuiasi.ro",
+    "telefon": "0744872775",
+    "sex": "feminin",
+    "mancare": "pasta",
+    "culoare": "#000000",
+    "dnastere": "2026-04-30",
+    "onastere": "",
+    "varsta": "50",
+    "website": "aa",
+    "descriere": "nu"
+  },
+  {
+    "utilizator": "mamaia",
+    "parola": "123",
+    "prenume": "a",
+    "nume": "s",
+    "email": "a",
+    "telefon": "1",
+    "sex": "feminin",
+    "mancare": "s",
+    "culoare": "#000000",
+    "dnastere": "2026-04-03",
+    "onastere": "01:02",
+    "varsta": "50",
+    "website": "s",
+    "descriere": "s"
+  },
+  {
+    "utilizator": "ana",
+    "parola": "dsjdfns",
+    "prenume": "fvfdv",
+    "nume": "dgbg",
+    "email": "gbgf",
+    "telefon": "2314",
+    "sex": "feminin",
+    "mancare": "sdsf",
+    "culoare": "#000000",
+    "dnastere": "2026-04-01",
+    "onastere": "11:11",
+    "varsta": "50",
+    "website": "aaaa",
+    "descriere": "ascfsvc "
+  }
+]

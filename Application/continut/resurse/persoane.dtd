@@ -1,0 +1,23 @@
+<!ELEMENT persoane (persoana+)>
+
+<!ELEMENT persoana (nume?, prenume, varsta, adresa, email?, telefon?, educatie?)>
+<!--<!ATTLIST persoana id ID #REQUIRED> iar in persoane.xml schimbe id = _1 -->
+<!ATTLIST persoana id CDATA #REQUIRED>
+
+<!ELEMENT nume (#PCDATA)>
+<!ELEMENT prenume (#PCDATA)>
+<!ELEMENT varsta (#PCDATA)>
+
+<!ELEMENT adresa (strada, numar, localitate, judet, tara)>
+<!ELEMENT strada (#PCDATA)>
+<!ELEMENT numar (#PCDATA)>
+<!ELEMENT localitate (#PCDATA)>
+<!ELEMENT judet (#PCDATA)>
+<!ELEMENT tara (#PCDATA)>
+
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT telefon (#PCDATA)>
+
+<!ELEMENT educatie (universitate, domeniu)>
+<!ELEMENT universitate (#PCDATA)>
+<!ELEMENT domeniu (#PCDATA)>

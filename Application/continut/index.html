@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ro">
+   <head>
+      <!--fisierul css-->
+      <link href="css/stil.css" rel="stylesheet" type="text/css">
+      <!--scriptul js-->
+      <script src="js/script.js" defer></script>
+      <!--favicon-->
+      <link rel="icon" type="image/x-icon" href="favicon.ico">
+      <!--<script src="js/persoane.js" defer></script> -->
+      <meta charset="UTF-8">
+      <script>
+         async function schimbaContinut(resursa, jsFisier, jsFunctie) { // parametri care nu au fost dati sunt notati drept undefined
+            
+            //ca sa pun ceva interactiv
+            //document.getElementById("continut").innerHTML ="<p>Se incarca...</p>";
+            
+            try
+            {
+               /* reusim sa dam fetch la resursa*/
+               // facem cerere la fisierul html si steptam raspunsul
+               const res = await fetch(resursa + ".html");
+
+               /* daca nu putem, atunci aruncam exceptie*/
+               if(!res.ok){
+                  console.log("Pagina nu a fost gasită");
+               }
+               
+               //transformam raspunsul in text si il pune in elementul cu id="continut"
+               const text = await res.text();
+               document.getElementById("continut").innerHTML = text;
+               
+               //PENTRU SCRIPT-URILE DE HTML
+
+               //adaugat pentru scriptul din verifica.html
+               //gasim scripturile si facem o functie arrow unde cream un scriptNou si copiem codul din scriptVechi
+               //care este cel din verifica.html si il adaugam la pagina
+               document.getElementById("continut").querySelectorAll("script").forEach(scriptVechi => {
+                  const scriptNou = document.createElement('script');
+                  scriptNou.textContent = scriptVechi.textContent;
+                  document.body.appendChild(scriptNou);
+               })
+
+               //PENTRU SCRIPT-URILE DIN JAVA SCRIPT
+
+               //daca avem ca parametru o pagina js
+               if(jsFisier)
+               {
+                  
+                  //creem un script si dupa ce se incarca fisierul js se apeleaza fct
+                  var elementScript = document.createElement('script');
+                  elementScript.onload = function () {
+                     if(jsFunctie) {
+                        window[jsFunctie] ();
+                     }
+                  };
+                  //setam sursa la script
+                  elementScript.src = jsFisier;
+                  document.head.appendChild(elementScript);
+               } else
+               {
+                  if (jsFunctie) {
+                     window[jsFunctie]();
+                  }
+               }
+            }
+            catch (err) {
+               document.getElementById("continut").innerHTML = "<p>Eroare la încarcare</p>";
+            }
+         }
+      </script>  
+
+      <title>
+         Felinele
+      </title>
+   </head>
+   <body onload="schimbaContinut('acasa')">
+      <header class="header">
+         <!--<img src="imagini/titlu.png" alt="pisicile"> -->
+         <a onclick="schimbaContinut('acasa')" class="nav-logo"><img src="imagini/titlu.png" alt="titlu_pisica" width="20%" height="20%"></a>
+      </header>
+      <hr>
+      <nav class="navbar">
+         <a class="myButton" onclick="schimbaContinut('verifica')">Verifică</a>
+         <a class="myButton" onclick="schimbaContinut('cumparaturi', 'js/cumparaturi.js')">Cumpărături</a>
+         <a class="myButton" onclick="schimbaContinut('persoane', 'js/persoane.js', 'incarcaPersoane')">Persoane</a>
+         <a class="myButton" onclick="schimbaContinut('despre')">Despre</a>
+         <a class="myButton" onclick="schimbaContinut('invat', 'js/script.js', 'incarcaFunctii')">Învăț</a>
+         <a class="myButton" onclick="schimbaContinut('desen')">Desen</a>
+         <a class="myButton" onclick="schimbaContinut('acasa')">Acasă</a>
+         <a class="myButton" onclick="schimbaContinut('inregistreaza')">Înregistrează</a>
+         <a class="myButton" onclick="schimbaContinut('video')">Video</a>
+      </nav>
+      <hr>
+      <main id="continut">
+      </main>
+      <hr>
+      <footer class="footer">
+         <p>Autor: Ana-Maria Chelarașu</p>
+         <p><a href="mailto:ana-maria.chelarasu@student.tuiasi.ro">ana-maria.chelarasu@student.tuiasi.ro</a></p>
+         <p>&copy;Pentru și despre pisici</p>
+         <p>&euro;&euro;&euro;Salvează un bănuț, iar o pisică va avea o masă în această seară!</p>
+         <p>&#9742; 07123456789</p>
+      </footer>
+   </body>
+</html>

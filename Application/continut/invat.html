@@ -1,0 +1,106 @@
+<div class="row">
+   <div class="column side">
+      <div class="sidebar section">
+         <aside>
+            <h2>Meniu</h2>
+            <ul>
+               <a class="myButton" href="#sectiunea1">Locația ta</a>
+               <a class="myButton" href="#sectiunea2">Desen interactiv</a>
+               <a class="myButton" href="#sectiunea3">Tabel</a>
+            </ul>
+            <h1 class="center">Bun venit în lumea pisicilor!</h1>
+            <figure>
+               <img src="imagini/index_1.jpeg" alt="pisica_1" width="100%">
+               <img src="imagini/index_2.jpeg" alt="pisica_2" width="100%">
+               <img src="imagini/index_3.jpeg" alt="pisica_3" width="100%">
+            </figure>
+         </aside>
+      </div>
+   </div>
+   <div class="column middle">
+      <section>
+         <!--1-->
+         <div id="sectiunea1">
+            <hr>
+            <div id="myTime">Timpul:</div>
+            <hr>
+            <div id="myURL">URL:</div>
+            <hr>
+            <!--Este functional, doar lent-->
+            <div id="myLocation">Locația: </div>
+            <hr>
+            <div id="myBrowser">Browser: </div>
+            <hr>
+            <div id="myOS">Sistem de operare: </div>
+            <hr>
+         </div>
+         <hr>
+         <!--2-->
+         <div id="sectiunea2">
+            <h1 style="color: magenta;">Pune pisicii o pălărie!</h1>
+            <div>
+               <label>Culoare umplere: <input type="color" id="fill" value="#ff0000"></label>
+               <label>Culoare contur: <input type="color" id="stroke" value="#000000"></label>
+            </div>
+         </div>
+         <canvas class="myCanvas" id="myCanvas" width="746" height="400" style="border:3px solid rgb(171, 32, 32);" onclick="press(event)"></canvas>
+         <!--3-->
+         <div id="sectiunea3">
+            <table id="myTable" border="1">
+               <tr>
+                  <th>Rasa de pisică</th>
+                  <th>Origine</th>
+                  <th>Caracter</th>
+                  <th>Blană</th>
+                  <th>Particularități</th>
+               </tr>
+               <tr>
+                  <td>Siameză</td>
+                  <td>Thailanda</td>
+                  <td>Vocală, afectuoasă</td>
+                  <td>Scurtă, fină</td>
+                  <td>Ochii albaștri, culoare contrastantă</td>
+               </tr>
+               <td>Persană</td>
+               <td>Iran</td>
+               <td>Calmă, liniștită</td>
+               <td>Lungă, deasă</td>
+               <td>Față turtită, necesită îngrijire zilnică</td>
+               </tr>
+               <tr>
+                  <td>Maine Coon</td>
+                  <td>SUA</td>
+                  <td>Prietenoasă</td>
+                  <td>Lungă, rezistentă</td>
+                  <td>Una dintre cele mai mari rase</td>
+               </tr>
+            </table>
+            <!--inserare linie-->
+            <div>
+               <label>Poziția liniei: <input type="number" id="rowPos"></label>
+               <label>Culoarea liniei: <input type="color" id="rowColor" value="#ffcccc"></label>
+               <input type="button" class="myButton" value="Adaugă" onclick="insertRow()">
+            </div>
+            <!--inserare coloana-->
+            <div>
+               <label>Poziția coloanei: <input type="number" id="colPos"></label>
+               <label>Culoarea coloanei: <input type="color" id="colColor" value="#ccffcc"></label>
+               <input type="button" class="myButton" value="Adaugă" onclick="insertCol()">
+            </div>
+         </div>
+      </section>
+   </div>
+   <div class="column side">
+      <aside>
+         <figure>
+            <img src="https://basepaws.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Fqj2yxv39d6ig%2F1wMKs0lPg0uu63ygLSckMN%2F2095049173360d931c1d08f2a34e525c%2Forange-cat.jpeg&w=3840&q=75" alt="O pisica portocalie" width="100%">
+            <!--<img src="imagini/pisica.jpg" alt="aceeasi pisica" width="50%">-->
+            <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExOXRvM29iOXEzb3lkMXFqZW93a2Q3ODF4YnZjNHVhbzYycWsybXd6eSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Yt09iFvD9u5AQ/giphy.gif" alt="gif1" width="100%">
+            <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExc2E4cWQyZnBpaTN4OTBwdmk1ZmozOTZia3FoN2s5N25kdGJtZnRpcCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/12T3GI5PpTrhoQ/giphy.gif" alt="gif2" width="100%">
+            <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExcTNybWl4OW1vbzhhMzdpZmlkd3B6d280cm9vMTdtOGx6eXJwM3FjcyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qqOlHOFzgfzJC/giphy.gif" alt="gif3" width="100%">
+            <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExamxhNWVkeTR5ZWQ1YXJqMjV0a200NXhlOW1iZjA0eWgzczJ5YjA0bSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/W3HRymvkwt3fM7igO2/giphy.gif" alt="gif4" width="100%">
+            <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExcGpvMHMyb3loNnh3bXVyZXhrZXdrZjFtNHB6bWR5YXJ3cW9kbmJkeiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/DyQM6pD3IyF9iLE21G/giphy.gif" alt="gif5" width="100%">
+         </figure>
+      </aside>
+   </div>
+</div>

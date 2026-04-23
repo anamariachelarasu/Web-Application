@@ -1,0 +1,60 @@
+<div class="row">
+   <div class="column side">
+   </div>
+   <div class="column middle">
+      <h2>
+         Verificarea utilizatorilor
+      </h2>
+      <label>Utilizator:</label>
+      <input type="text" id="utilizator" placeholder="Introduceți utilizatorul"><br><br>
+      <label>Parolă:</label>
+      <input type="password" id="parola" placeholder="Introduceți parola"><br><br>
+      <input class="myButton" type="button" value="Verifică" onclick="verificaUtilizator()">
+      <div id="rezultat"></div>
+      <script>
+         function verificaUtilizator() {
+         
+             //extragem valorile introduse
+             var utilizator = document.getElementById("utilizator").value;
+             var parola = document.getElementById("parola").value;
+             var rezultat = document.getElementById("rezultat");
+         
+             //cream un nou obiect 
+             var xhttp = new XMLHttpRequest();
+         
+             //callback apelat cand starea cererii se schimba
+             xhttp.onreadystatechange = function() {
+                 //cand raspunsul e gata si 200 ca server a raspuns cu succes
+                 if(this.readyState == 4 && this.status == 200) {
+                     //JSON vine ca text si noi il parsam
+                     var utilizatori = JSON.parse(this.responseText);
+         
+         
+                     //verificarea daca datele introduse au un match cu ce avem noi
+                     var gasit = utilizatori.find(function(u) {
+                         if(u.utilizator == utilizator && u.parola == parola)
+                             return true;
+                     });
+         
+                     if(gasit) {
+                         rezultat.style.color = "green";
+                         rezultat.innerHTML = "Utilizator și parolă corecte!";
+                     }
+                     else
+                     {
+                         rezultat.style.color = "red";
+                         rezultat.innerHTML = "Utilizator și parolă grșite!";
+                     }
+                 }
+             };
+         
+             //configurarea cererii
+             xhttp.open("GET", "resurse/utilizatori.json", true);
+             //trimiterea cererii
+             xhttp.send();
+         }
+      </script>
+   </div>
+   <div class="column side">
+   </div>
+</div>

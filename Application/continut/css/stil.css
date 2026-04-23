@@ -1,0 +1,295 @@
+/*
+
+#id ID
+.class CLASS
+element tag HTML
+
+*/
+
+/* definire paleta culori in root ca sa se aplice global pe toata pagina*/
+:root {
+--background: #f5f7f6;
+--primary: #6b8f8a;
+--secondary: #a3bfb8;
+--accent: #d9a5a5;
+--text: #2e2e2e;
+--button: #8fbdb7;
+--button_hover: #7aa9a3;
+}
+
+/* reset si body */
+* {
+box-sizing: border-box; /* padding si border sunt incluse in latimea/inaltimea elementului*/
+}
+
+html {
+background-color:antiquewhite;
+scroll-behavior: smooth; /* pont primit ca atunci cand apesi pe un link #ancora, pagina sa se deruleze lin*/
+} 
+
+body {
+font-family: Georgia, serif;
+color: var(--text);
+}
+
+/*header*/
+.header {
+background-color: var(--primary);
+background-image: url("../imagini/pisici_bg.png"); /* punem imaginea cu pisici peste culoarea de fundal*/
+scroll-behavior: smooth; /* pont primit */
+padding: 30px;
+text-align: center;
+font-size: 35px;
+border: 12px inset rgba(28,110,164,0.44); /* creem efectul vizual de adancit */
+/* 0.44 e canal alpha unde 0 e canal transparent si 1 e complet opac*/
+}
+
+/* coloane - model dupa exemplul de pe w3school*/
+/* asta e pentru laptop */
+.column {
+float: left; /* elementul pluteste la stg si permite altor elemente sa se aseze langa el*/
+padding: 10px;
+}
+
+.column.side {
+text-shadow: 2px 2px 5px rgba(0,0,0,0.4); /* 2px deplasare pe orizontala si verticala a umbrei, 5px gradul de blur, culoare umbra */
+width: 25%; /* ocupa 25% din latimea parintelui */
+background-color: var(--secondary);
+align-items:center;
+font-family: Georgia, serif;
+font-size: 14px;
+letter-spacing: -0.2px; /* spatiu intre litere */
+word-spacing: -0.2px; /* spatiu intre cuvint */
+color: var(--text);
+box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* umbra in jurul scrisului */
+}
+
+/* site interesant ca sa te joci cu css: https://htmlcheatsheet.com/css/ */
+.column.middle {
+text-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+width: 50%; /* ocupa 50% din latimea parintelui */
+background-color: var(--background);
+align-items:center;
+font-family: Georgia, serif;
+font-size: 14px;
+letter-spacing: -0.2px;
+word-spacing: -0.2px;
+color: var(--text);
+box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* avem o umbra in jurul sectiunii */
+transition: transform 0.3s; /* se mareste column.middle gradual cand sunt cu mouse-ul desupra */
+}
+
+/* pseudo-clasa */
+.column.middle:hover{
+   transform: scale(1.02); /* am observat ca fara aceasta linie nu merge transition */
+   /* marim elementul la 102% din dimensiunea lui - gen caseta se face mai mare*/
+}
+
+.row{
+display:flex; /* copiii se aseaza automat pe o linie */
+flex-wrap:wrap; /* daca nu incap pe o linie copii trec la randul urmator */
+}
+
+/* footer */
+.footer {
+background-color: var(--primary);
+padding: 10px;
+text-align: center;
+/* pentru animatia cu 2 culori */
+animation-name: animatie;
+/* dupa 3 secunde ea revine la culoarea initiala */
+animation-duration: 3s;
+animation-iteration-count: infinite;
+animation-direction: alternate;
+/* bordura cu puncte din footer */
+border: 12px dotted rgba(28,110,164,0.44);
+}
+
+/* butoane */
+.myButton {
+display: flex;
+justify-content: center;
+text-align: center;
+color: #ffffff;
+font-size: 17px;
+line-height: 17px;
+padding: 6px;
+border-radius: 5px; /* rotunjirea colturilor */
+font-family: Georgia, serif;
+font-weight: 700; /*bold */
+font-style: italic; /*italic */
+background-image: linear-gradient(to right, var(--button) 0%, var(--secondary) 50%, var(--primary) 100%); /* gradient pus ca butoanele sa aiba aspectul dorit de mine */
+display: inline-block; /* butonul ocupa doar spatiul continutului, dar accepta padding/margin ca un element bloc */
+box-shadow: 5px 5px 15px rgba(0,0,0,0.3); /* umbra in jurul butonului */
+transition: transform 0.3s; /*ca butonul sa se duca pe laterala in mod smooth*/
+}
+
+/* trecem cu mouse-ul peste el */
+.myButton:hover {
+background: var(--button_hover);
+transform: rotate(-3deg) scale(1.05); /*ca butonul sa se duca pe laterala */
+}
+
+/* butonul e activ */
+.myButton:active {
+background: var(--primary);
+}
+
+/* navigation bar -> butoanele */
+.navbar{
+display:flex;
+justify-content:center;
+gap:20px; /* spatiu de 20px intre fiecare buton */
+padding:10px;
+background-color: var(--primary);
+flex-wrap:wrap; /*in caz de nu incap, trec pe randul urmator */
+}
+
+/* ca sa incadram desenul din desen.html */
+svg{
+   transform: scale(0.92); /*micsoram desenul */
+   transform-origin: left; /* desenul are originea in dreapta*/
+}
+
+iframe{
+max-width:100%;
+border:none;
+}
+
+/* tabelele */
+table {
+   max-width: 100%;
+   border-collapse: collapse; /*bordurile celulelor se unesc in una singura - fara acest lucru, fiecare celula are bordura ei proprie*/
+   padding: 10px; /* spatiul dintre border si content */
+   text-align: center;
+}
+
+table th, table td{
+   max-width:100%;
+   justify-content: center;
+   text-align: left;
+   padding: 10px;
+   border-bottom: 1px solid #ddd; /* punem o linie subtire ca separator intre linii */
+}
+
+table tr {
+   max-width: 100%;
+   background-color: var(--background);
+}
+table tr:hover {
+   max-width: 100%;
+   background-color: var(--accent); /* cand suntem deasupra randului se coloreaza */
+}
+
+/*formularele*/
+form {
+    background-color: var(--secondary);
+    padding: 20px;
+    border-radius: 10px; /* colturi rotunjite */
+    width: 80%; /* formularul nu ocupa toata inaltimea paginii */
+    margin: auto; /* centrale orizontala */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* umbra in jurul formularului */
+    transition: box-shadow 0.3s; /* umbra se schimba gradual la hover */
+}
+
+/* am adaugat o tranzitie pe baza umbrelor ca atunci cand suntem cu mouse-ul pe deasupra sa fie mai umbrit */
+form:hover {
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+/* element - adaugam dupa text*/
+h2::after {
+    content: "≽^•⩊•^≼";
+    color: var(--accent);
+    font-size: 1em;
+}
+
+/* element - adaugam inainte de text*/
+h1::before {
+   content: "₍^. .^₎⟆";
+   color: var(--primary);
+   font-size: 1em;
+}
+
+/* florile */
+#borderimg {
+  border: 10px solid transparent; /* creeaza spatiu pt chenar, dar transparent ca sa nu se suprapuna cu img */
+  padding: 15px;
+  border-image: url("../imagini/border.png") 110 round; /* taiem 110px din imagine pt fiecare colt/latura; round - imaginea se repeta sa se potriveasca */
+}
+
+/* animatie */
+@keyframes animatie {
+  from {background-color: var(--accent);}
+  to {background-color: peachpuff;}
+}
+
+/* galeria video */
+.gallery {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 20px;
+   justify-content: center;
+   background-color: var(--accent);
+}
+
+.big {
+   flex: 1 1 600px; /* 1 poate creste sa mple spatiul; 1 poate sa micsoreze daca e nevoie; dimensiunea de pornire */
+   height: 350px; /* daca nu e linia asta imi taie fereastra cu video */
+}
+
+.medium {
+   flex: 1 1 120px; /* are o dimensiune mai mica de 120px */
+   height: 250px;
+}
+
+/* media query */
+/* asta e pentru schimbarea aspectului coloanelor pe ecranele mai mici: cand fereastra browserului are sub 600px */
+/* dtil de baza pentru telefoane */
+body {
+  background-color: var(--primary);
+  color: white;
+}
+
+/* pt dispozitive cu minim 600px dimensiune */
+@media screen and (min-width: 600px) {
+  body {
+    background-color: #FEEBE7;
+    color: white;
+  }
+}
+
+/* pt dispozitive cu minim 1000px dimensiune */
+@media screen and (min-width: 1000px) {
+  body {
+    background-color: peachpuff;
+    color: black;
+  }
+}
+
+#myCanvas {
+   max-width: 100%; /* mareste imaginea la dimensiunea sectiunii parinte */
+}
+
+
+#formular-cumparaturi form {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 20px; /* spatiu intre elemente */
+   flex-wrap: wrap;
+}
+
+#formular-cumparaturi div {
+   display: flex;
+   flex-direction: column; /* pt label deasupra inputului */
+}
+
+#alegereStorage {
+    border-radius: 4px; /* rotunjire de colturi ale chenarului */
+    
+    margin-top: 14px;
+    background-color: var(--background);
+    font-family: Georgia, serif;
+    font-size: 14px;
+}

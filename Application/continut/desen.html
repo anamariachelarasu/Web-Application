@@ -1,0 +1,187 @@
+<div class="row">
+   <div class="column side">
+      <div class="sidebar section">
+         <aside>
+            <h1 style="color: blueviolet;">Toți prietenii blănoși merită un acoperiș!</h1>
+            <img src="https://kittiesandcream.ca/cdn/shop/articles/195881731_872998223252345_897528580409208603_n_454x.jpg?v=1624387493" alt="desen1" width="100%">
+            <p>Și pisicilor le este greu să se confrunte cu temeraturile ridicate pe timpul verii!</p>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQicDDaR3zrTptjr_mj97mz75FrWc1mNRXv0A&s" alt="desen2" width="100%">
+            <p>Sunt pisici care nu au norocul să fie adoptate, deci să nu uităm că și lor le este foame!</p>
+            <img src="https://static.boredpanda.com/blog/wp-content/uploads/2017/02/Outdoor-wooden-houses-for-homeless-cats-in-Riga-58b53f647b246__700.jpg" alt="desen3" width="100%">
+            <p>Pe timpul iernii ameznajează o căsuță pentru pisicuțe. Îți vor fi recunoscătoare!</p>
+         </aside>
+      </div>
+   </div>
+   <div class="column middle">
+      <section>
+         <!-- posibila eroare: nu are h1 -->
+         <!-- width/height = dimensiunile desenului -->
+         <svg width="800" height="600" class="svg">
+            <!--gradient-->
+
+            <!-- tranzitie de culoare pe o linie dreapta - x1, y1 pct de start al gradientului
+               x2, y2 - punctul de final al gradientului -->
+
+            <!--nori-->
+            <defs>
+               <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="grey" />
+                  <stop offset="100%" stop-color="white" />
+               </linearGradient>
+            </defs>
+
+            <!-- tranzitie de culoare in cercuri concentrice -->
+            <!-- porneste din centru spre exterior --> 
+            <!--soare-->
+            <defs>
+               <radialGradient id="grad2">
+                  <stop offset="0%" stop-color="white" />
+                  <stop offset="50%" stop-color="yellow" />
+                  <stop offset="100%" stop-color="orange" />
+               </radialGradient>
+            </defs>
+            <!--copaci-->
+            <!--cx, cy = centru gradientului; r - raza gradientului -->
+            <defs>
+               <radialGradient id="grad3" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="lightgreen" />
+                  <stop offset="100%" stop-color="darkgreen" />
+               </radialGradient>
+            </defs>
+            <!--acoperis-->
+            <!-- rosu spre burgund gradient -->
+            <defs>
+               <linearGradient id="grad4">
+                  <stop offset="0%" stop-color="red" />
+                  <stop offset="100%" stop-color="#800020" />
+               </linearGradient>
+            </defs>
+            <!--cladire-->
+            <!-- portoclaiu deschis spre inchis -->
+            <defs>
+               <linearGradient id="grad5">
+                  <stop offset="0%" stop-color="rgb(250,177,47)" />
+                  <stop offset="100%" stop-color="rgb(250, 129, 47)" />
+               </linearGradient>
+            </defs>
+            <!--ferestre-->
+            <!-- 4 stop-uri = efect de reflexie de geam-->
+            <defs>
+               <linearGradient id="grad6">
+                  <stop offset="0%" stop-color="rgb(247, 248, 240)" />
+                  <stop offset="25%" stop-color="rgb(156, 213, 255)" />
+                  <stop offset="75%" stop-color="rgb(122, 170, 206)" />
+                  <stop offset="100%" stop-color="rgb(53, 88, 114)" />
+               </linearGradient>
+            </defs>
+            <!-- fundal -->
+            <!-- acopera toate suprafata svg-ului  -->
+            <rect width="100%" height="100%" fill="lightblue" />
+            <!--iarba-->
+            <!-- dreptunghi verde in partea de jos -->
+            <rect x="0" y="500" width="100%" height="100" fill="lightgreen" />
+            <!--nori-->
+            <ellipse cx="100" cy="70" rx="85" ry="55" fill="url(#grad1)">
+               <animate attributeName="cx" 
+                  from="100"
+                  to="75"
+                  dur="5s"
+                  repeatCount="indefinite" />
+            </ellipse>
+            <ellipse cx="160" cy="70" rx="85" ry="55" fill="url(#grad1)">
+               <animate attributeName="cx"
+                  from="160"
+                  to="135"
+                  dur="5s"
+                  repeatCount="indefinite" />
+            </ellipse>
+            <ellipse cx="240" cy="70" rx="85" ry="55" fill="url(#grad1)">
+               <animate attributeName="cx"
+                  from="240"
+                  to="215"
+                  dur="5s"
+                  repeatCount="indefinite" />
+            </ellipse>
+            <ellipse cx="450" cy="70" rx="85" ry="55" fill="url(#grad1)">
+               <animate attributeName="cx"
+                  from="450"
+                  to="425"
+                  dur="5s"
+                  repeatCount="indefinite" />
+            </ellipse>
+            <ellipse cx="510" cy="70" rx="85" ry="55" fill="url(#grad1)">
+               <animate attributeName="cx"
+                  from="510"
+                  to="485"
+                  dur="5s"
+                  repeatCount="indefinite" />
+            </ellipse>
+            <!--soare-->
+            <circle cx="700" cy="70" r="60" fill="url(#grad2)">
+               <animate attributeName="cx"
+                  from="700"
+                  to="650"
+                  dur="5s"
+                  repeatCount="indefinite" />
+            </circle>
+
+            <!--trunchi copac-->
+            <rect x="370" y="400" width="60" height="100" fill="saddlebrown" />
+            
+            <!--frunze copac-->
+            <circle cx="400" cy="330" r="70" fill="url(#grad3)" />
+            <circle cx="350" cy="380" r="60" fill="url(#grad3)" />
+            <circle cx="450" cy="380" r="60" fill="url(#grad3)" />
+            
+            <!--trunchi copac-->
+            <rect x="200" y="400" width="60" height="100" fill="saddlebrown" />
+            
+            <!--frunze copac-->
+            <circle cx="230" cy="330" r="70" fill="url(#grad3)" />
+            <circle cx="180" cy="380" r="60" fill="url(#grad3)" />
+            <circle cx="280" cy="380" r="60" fill="url(#grad3)" />
+            
+            <!--trunchi copac-->
+            <rect x="30" y="400" width="60" height="100" fill="saddlebrown" />
+            
+            <!--frunze copac-->
+            <circle cx="60" cy="330" r="70" fill="url(#grad3)" />
+            <circle cx="10" cy="380" r="60" fill="url(#grad3)" />
+            <circle cx="110" cy="380" r="60" fill="url(#grad3)" />
+            <!--casa-->
+            <!--cladire-->
+            <rect width="250" height="210" x="500" y="290" style="fill:url(#grad5); stroke-color: 3;stroke: black;" />
+            <!--acoperis-->
+            <polygon points="480,290 770,290 625,210" style="fill:url(#grad4); stroke:black; stroke-width: 3;" />
+            <!--usa-->
+            <rect x="605" y="410" width="50" height="90" style="fill:brown; stroke:black; stroke-width: 3;" />
+            <!--fereastra-->
+            <rect x="530" y="330" width="50" height="50" style="fill:url(#grad6); stroke:black; stroke-width: 3;" />
+            <rect x="680" y="330" width="50" height="50" style="fill:url(#grad6); stroke:black; stroke-width: 3;" />
+            <rect x="605" y="330" width="50" height="50" style="fill:url(#grad6); stroke:black; stroke-width: 3;" />
+            <rect x="530" y="430" width="50" height="50" style="fill:url(#grad6); stroke:black; stroke-width: 3;" />
+            <rect x="680" y="430" width="50" height="50" style="fill:url(#grad6); stroke:black; stroke-width: 3;" />
+            <!--mesaj-->
+            <rect x="415" y="450" width="150" height="100" fill="yellow" />
+            <image x="340" y="449" width="300" height="100" href="https://www.pawschicago.org/fileadmin/_processed_/8/c/csm_garden1-1024x685_0438a114ad.jpg" />
+            <text x="84" y="180" fill="black"></text>
+            <!--afis-->
+            <rect width="210" height="30" x="520" y="295" style="fill:white; stroke:black; stroke-width: 3" />
+            <text x="542" y="314" fill="black">&#128049; Adăpostul pisicesc &#128049;</text>
+         </svg>
+      </section>
+   </div>
+   <div class="column side">
+      <aside>
+         <figure>
+            <img src="https://basepaws.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Fqj2yxv39d6ig%2F1wMKs0lPg0uu63ygLSckMN%2F2095049173360d931c1d08f2a34e525c%2Forange-cat.jpeg&w=3840&q=75" alt="O pisica portocalie" width="100%">
+            <!--<img src="imagini/pisica.jpg" alt="aceeasi pisica" width="50%">-->
+            <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExOXRvM29iOXEzb3lkMXFqZW93a2Q3ODF4YnZjNHVhbzYycWsybXd6eSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Yt09iFvD9u5AQ/giphy.gif" alt="gif1" width="100%">
+            <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExc2E4cWQyZnBpaTN4OTBwdmk1ZmozOTZia3FoN2s5N25kdGJtZnRpcCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/12T3GI5PpTrhoQ/giphy.gif" alt="gif2" width="100%">
+            <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExcTNybWl4OW1vbzhhMzdpZmlkd3B6d280cm9vMTdtOGx6eXJwM3FjcyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qqOlHOFzgfzJC/giphy.gif" alt="gif3" width="100%">
+            <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExamxhNWVkeTR5ZWQ1YXJqMjV0a200NXhlOW1iZjA0eWgzczJ5YjA0bSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/W3HRymvkwt3fM7igO2/giphy.gif" alt="gif4" width="100%">
+            <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExcGpvMHMyb3loNnh3bXVyZXhrZXdrZjFtNHB6bWR5YXJ3cW9kbmJkeiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/DyQM6pD3IyF9iLE21G/giphy.gif" alt="gif5" width="100%">
+         </figure>
+      </aside>
+   </div>
+</div>

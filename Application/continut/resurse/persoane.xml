@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE persoane SYSTEM "persoane.dtd">
+
+<persoane>
+    <persoana id="1">
+        <nume>Popescu</nume>
+        <prenume>Ion</prenume>
+        <varsta>23</varsta>
+        <adresa>
+            <strada>Florilor</strada>
+            <numar>23</numar>
+            <localitate>IASI</localitate>
+            <judet>IASI</judet>
+            <tara>Romania</tara>
+        </adresa>
+    </persoana>
+
+    <persoana id="2">
+        <nume>Chelarasu</nume>
+        <prenume>Ana-Maria</prenume>
+        <varsta>21</varsta>
+        <adresa>
+            <strada>Lalelelor</strada>
+            <numar>25</numar>
+            <localitate>Tg Frumos</localitate>
+            <judet>IASI</judet>
+            <tara>Romania</tara>
+        </adresa>
+        <email>ana-maria.chelarasu@student.tuiasi.ro</email>
+        <telefon>0712345678</telefon>
+        <educatie>
+            <universitate>Universitatea Tehnica "Gheorghe Asachi" Iasi</universitate>
+            <domeniu>Calculatoare si Tehnologia Informatiei</domeniu>
+        </educatie>
+    </persoana>
+
+    <persoana id="3">
+        <nume>Ionescu</nume>
+        <prenume>Gigel</prenume>
+        <varsta>20</varsta>
+        <adresa>
+            <strada>Ghioceilor</strada>
+            <numar>29</numar>
+            <localitate>Pascani</localitate>
+            <judet>IASI</judet>
+            <tara>Romania</tara>
+        </adresa>
+        <email>gigel.ionescu@student.tuiasi.ro</email>
+        <telefon>0712345688</telefon>
+        <educatie>
+            <universitate>Universitatea Tehnica "Gheorghe Asachi" Iasi</universitate>
+            <domeniu>Ingineria sistemelor</domeniu>
+        </educatie>
+    </persoana>
+</persoane>

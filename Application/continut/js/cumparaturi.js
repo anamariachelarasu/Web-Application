@@ -172,7 +172,7 @@ class IndexedDB extends StorageManager {
 
         //eroare 1
         request.onsuccess = (e) => {
-            console.error(" produs salvat");
+            console.log(" produs salvat");
         }
 
         request.onerror = (e) => {
